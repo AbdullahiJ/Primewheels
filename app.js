@@ -32,28 +32,53 @@ document.querySelectorAll(".filter").forEach((btn) => {
   });
 });
 
-const form = document.getElementById("bookingForm");
-const msg = document.getElementById("formMsg");
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  msg.hidden = false;
-  form.reset();
-  if (bookingDate) {
-    const today = new Date();
-    const yyyy = today.getFullYear();
-    const mm = String(today.getMonth() + 1).padStart(2, "0");
-    const dd = String(today.getDate()).padStart(2, "0");
-    bookingDate.value = `${yyyy}-${mm}-${dd}`;
-  }
-});
-
 document.getElementById("year").textContent = new Date().getFullYear();
 
 const bookingDate = document.getElementById("bookingDate");
-if (bookingDate) {
+function setDefaultDate() {
+  if (!bookingDate) return;
   const today = new Date();
   const yyyy = today.getFullYear();
   const mm = String(today.getMonth() + 1).padStart(2, "0");
   const dd = String(today.getDate()).padStart(2, "0");
   bookingDate.value = `${yyyy}-${mm}-${dd}`;
 }
+setDefaultDate();
+
+const BOOKING_EMAIL_ENDPOINT = "https://formsubmit.co/ajax/primewheelsafrica@gmail.com";
+const form = document.getElementById("bookingForm");
+const msg = document.getElementById("formMsg");
+const err = document.getElementById("formErr");
+const submitBtn = document.getElementById("bookingSubmit");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  msg.hidden = true;
+  err.hidden = true;
+
+  const data = new FormData(form);
+  data.append("_captcha", "false");
+
+  const originalText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending…";
+
+  try {
+    const res = await fetch(BOOKING_EMAIL_ENDPOINT, {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" },
+    });
+
+    if (!res.ok) throw new Error("send failed");
+
+    msg.hidden = false;
+    form.reset();
+    setDefaultDate();
+  } catch (error) {
+    err.hidden = false;
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  }
+});

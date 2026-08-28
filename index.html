@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="images/logo-circle.jpg?v=2" type="image/jpeg" />
-  <link rel="stylesheet" href="styles.css?v=13" />
+  <link rel="stylesheet" href="styles.css?v=14" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -307,6 +307,9 @@
           <p>We’ll confirm availability and send a quote. Pangani Agoi Road, Nairobi.</p>
         </div>
         <form id="bookingForm" novalidate>
+          <input type="hidden" name="_subject" value="New booking request — PRIME WHEELS AFRICA" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true" />
           <div class="form-row">
             <label>
               Full name
@@ -351,8 +354,9 @@
             Notes
             <textarea name="notes" rows="3" placeholder="Flight number, Prado / Harrier / Mark X, child seats…"></textarea>
           </label>
-          <button class="btn btn-gold btn-full" type="submit">Request booking</button>
+          <button class="btn btn-gold btn-full" type="submit" id="bookingSubmit">Request booking</button>
           <p class="form-msg" id="formMsg" hidden>Thank you. A PRIME WHEELS AFRICA advisor will reach you shortly.</p>
+          <p class="form-msg form-msg-error" id="formErr" hidden>Could not send right now. Please call or WhatsApp us, or try again.</p>
         </form>
       </div>
     </section>
@@ -409,6 +413,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=6"></script>
+  <script src="app.js?v=7"></script>
 </body>
 </html>
