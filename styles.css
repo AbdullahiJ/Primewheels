@@ -337,7 +337,7 @@ button, input, select, textarea {
   text-decoration: none;
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
   animation: callFloat 4s ease-in-out infinite;
-  max-width: min(280px, calc(100vw - 10vw));
+  max-width: min(300px, calc(100vw - 10vw));
 }
 .hero-call:hover {
   transform: translateY(-2px) scale(1.02);
@@ -354,12 +354,14 @@ button, input, select, textarea {
   color: #1a1408;
   font-size: 0.95rem;
   box-shadow: 0 2px 8px rgba(180, 140, 40, 0.35);
+  flex-shrink: 0;
 }
 .hero-call-text {
   display: flex;
   flex-direction: column;
   line-height: 1.15;
   text-shadow: none;
+  gap: 2px;
 }
 .hero-call-text small {
   font-size: 0.64rem;
@@ -368,11 +370,17 @@ button, input, select, textarea {
   color: #e6d08a;
   font-weight: 600;
 }
+.hero-call-text a {
+  text-decoration: none;
+  color: inherit;
+}
+.hero-call-text a:hover strong { color: var(--gold-2); }
 .hero-call-text strong {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   color: #fff;
+  display: block;
 }
 @keyframes callFloat {
   0%, 100% { transform: translateY(0); }

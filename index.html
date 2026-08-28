@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="images/logo-circle-sm.jpg" type="image/jpeg" />
   <link rel="preload" as="image" href="images/hero-nairobi-expressway.jpg" fetchpriority="high" />
-  <link rel="stylesheet" href="styles.css?v=15" />
+  <link rel="stylesheet" href="styles.css?v=16" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -51,13 +51,14 @@
           decoding="async"
         />
         <div class="hero-shade"></div>
-        <a class="hero-call" href="tel:+254759500289">
+        <div class="hero-call" role="group" aria-label="Call for inquiry">
           <span class="hero-call-ico" aria-hidden="true">☎</span>
           <span class="hero-call-text">
             <small>For any inquiry call</small>
-            <strong>+254 759 500 289</strong>
+            <a href="tel:+254759500289"><strong>+254 759 500 289</strong></a>
+            <a href="tel:+254720210540"><strong>0720 210 540</strong></a>
           </span>
-        </a>
+        </div>
       </div>
       <div class="hero-copy">
         <p class="eyebrow gold-rule">Drive luxury. Own excellence.</p>
@@ -473,10 +474,14 @@
           <span>Visit</span>
           Pangani Agoi Road
         </a>
-        <a href="https://www.snapchat.com/add/zackaaj" target="_blank" rel="noopener">
+        <article class="contact-card">
           <span>Snapchat</span>
-          Zackaaj
-        </a>
+          <p class="wa-line">
+            <a href="https://www.snapchat.com/add/zackaaj" target="_blank" rel="noopener">Zackaaj</a>
+            <em>or</em>
+            <a href="https://www.snapchat.com/add/ibrahimkheir202" target="_blank" rel="noopener">ibrahimkheir202</a>
+          </p>
+        </article>
       </div>
     </section>
   </main>
