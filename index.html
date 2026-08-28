@@ -279,6 +279,22 @@
           </div>
         </article>
       </div>
+      <aside class="more-fleet" id="moreFleet">
+        <p class="more-fleet-copy"><strong>Didn’t see your car?</strong> More models on request.</p>
+        <form class="more-fleet-form" id="fleetRequestForm">
+          <input type="hidden" name="_subject" value="Fleet request — PRIME WHEELS AFRICA" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="form" value="Didn't see your car" />
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true" />
+          <label class="sr-only" for="wantCar">Car you want</label>
+          <input id="wantCar" name="looking_for" type="text" placeholder="Car you want" autocomplete="off" />
+          <label class="sr-only" for="wantPhone">Phone</label>
+          <input id="wantPhone" name="phone" type="tel" placeholder="Your number" autocomplete="tel" />
+          <button class="btn btn-gold btn-sm" type="submit" id="fleetRequestSubmit">Request</button>
+          <p class="more-fleet-ok" id="fleetRequestOk" hidden>Sent. We’ll email you back.</p>
+          <p class="more-fleet-fail" id="fleetRequestFail" hidden>Couldn’t send. Call 0711 113 399.</p>
+        </form>
+      </aside>
       <div class="sale-empty" id="saleEmpty" hidden>
         <div class="sale-empty-inner">
           <span class="sale-empty-mark" aria-hidden="true">◆</span>

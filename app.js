@@ -26,8 +26,12 @@ document.querySelectorAll(".filter").forEach((btn) => {
       if (show) visible += 1;
     });
     const saleEmpty = document.getElementById("saleEmpty");
+    const moreFleet = document.getElementById("moreFleet");
     if (saleEmpty) {
       saleEmpty.hidden = !(type === "sale" && visible === 0);
+    }
+    if (moreFleet) {
+      moreFleet.hidden = type === "sale";
     }
   });
 });
@@ -46,32 +50,60 @@ function setDefaultDate() {
 setDefaultDate();
 
 const BOOKING_EMAIL_ENDPOINT = "https://formsubmit.co/ajax/primewheelsafrica@gmail.com";
+
+async function sendToInbox(formEl) {
+  const data = new FormData(formEl);
+  data.append("_captcha", "false");
+  const res = await fetch(BOOKING_EMAIL_ENDPOINT, {
+    method: "POST",
+    body: data,
+    headers: { Accept: "application/json" },
+  });
+  if (!res.ok) throw new Error("send failed");
+}
+
 const form = document.getElementById("bookingForm");
 const msg = document.getElementById("formMsg");
 const err = document.getElementById("formErr");
 const submitBtn = document.getElementById("bookingSubmit");
+
+const fleetForm = document.getElementById("fleetRequestForm");
+const fleetOk = document.getElementById("fleetRequestOk");
+const fleetFail = document.getElementById("fleetRequestFail");
+const fleetSubmit = document.getElementById("fleetRequestSubmit");
+
+if (fleetForm) {
+  fleetForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    fleetOk.hidden = true;
+    fleetFail.hidden = true;
+    const original = fleetSubmit.textContent;
+    fleetSubmit.disabled = true;
+    fleetSubmit.textContent = "Sending…";
+    try {
+      await sendToInbox(fleetForm);
+      fleetOk.hidden = false;
+      fleetForm.reset();
+    } catch {
+      fleetFail.hidden = false;
+    } finally {
+      fleetSubmit.disabled = false;
+      fleetSubmit.textContent = original;
+    }
+  });
+}
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   msg.hidden = true;
   err.hidden = true;
 
-  const data = new FormData(form);
-  data.append("_captcha", "false");
-
   const originalText = submitBtn.textContent;
   submitBtn.disabled = true;
   submitBtn.textContent = "Sending…";
 
   try {
-    const res = await fetch(BOOKING_EMAIL_ENDPOINT, {
-      method: "POST",
-      body: data,
-      headers: { Accept: "application/json" },
-    });
-
-    if (!res.ok) throw new Error("send failed");
-
+    await sendToInbox(form);
     msg.hidden = false;
     form.reset();
     setDefaultDate();
