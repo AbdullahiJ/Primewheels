@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" role="img" aria-label="PRIME WHEELS AFRICA">
+  <defs>
+    <linearGradient id="gold" x1="80" y1="40" x2="920" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF3C4"/>
+      <stop offset=".3" stop-color="#E8C547"/>
+      <stop offset=".65" stop-color="#C9A227"/>
+      <stop offset="1" stop-color="#8A6A10"/>
+    </linearGradient>
+    <linearGradient id="chrome" x1="200" y1="60" x2="860" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset=".4" stop-color="#E8ECF2"/>
+      <stop offset="1" stop-color="#A8B0BD"/>
+    </linearGradient>
+    <linearGradient id="primeGold" x1="80" y1="220" x2="480" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE7A0"/>
+      <stop offset=".5" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#A88920"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="420" fill="#050505"/>
+
+  <!-- swooshes -->
+  <path d="M210 145c95-78 235-105 390-78" stroke="url(#chrome)" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M230 168c105-70 250-90 385-58" stroke="url(#gold)" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M620 95c55 12 95 40 118 78" stroke="url(#chrome)" stroke-width="7" stroke-linecap="round" fill="none" opacity=".85"/>
+
+  <!-- car -->
+  <path fill="url(#gold)" d="M250 210c8-22 28-42 58-52l42-16c14-30 44-50 86-52 36-2 68 12 90 38l48 14c30 8 50 28 56 52l2 14H248l2-10Z"/>
+  <path fill="url(#chrome)" opacity=".5" d="M390 118c22-8 50-6 72 8l-10 24c-18-8-40-10-62-6l0-26Z"/>
+  <path fill="#000" opacity=".28" d="M468 132c18 10 30 24 36 40h48c-6-18-20-32-40-40l-44 0Z"/>
+  <circle cx="320" cy="228" r="28" fill="#111" stroke="url(#gold)" stroke-width="6"/>
+  <circle cx="320" cy="228" r="10" fill="url(#chrome)"/>
+  <circle cx="650" cy="228" r="28" fill="#111" stroke="url(#gold)" stroke-width="6"/>
+  <circle cx="650" cy="228" r="10" fill="url(#chrome)"/>
+
+  <!-- wordmark -->
+  <text x="500" y="310" text-anchor="middle" font-family="Montserrat, Arial Black, Arial, sans-serif" font-size="78" font-weight="800" letter-spacing="4">
+    <tspan fill="url(#primeGold)">PRIME </tspan><tspan fill="url(#chrome)">WHEELS</tspan>
+  </text>
+  <text x="500" y="348" text-anchor="middle" fill="url(#gold)" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="8">AFRICA</text>
+  <line x1="320" y1="368" x2="420" y2="368" stroke="url(#gold)" stroke-width="2"/>
+  <line x1="580" y1="368" x2="680" y2="368" stroke="url(#gold)" stroke-width="2"/>
+  <text x="500" y="392" text-anchor="middle" fill="#E8D59A" font-family="Montserrat, Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="4">CAR HIRE " SALES " LEASING</text>
+</svg>

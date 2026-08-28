@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 72" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="gold" x1="10" y1="8" x2="110" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF3C4"/>
+      <stop offset=".35" stop-color="#E8C547"/>
+      <stop offset=".7" stop-color="#C9A227"/>
+      <stop offset="1" stop-color="#8A6A10"/>
+    </linearGradient>
+    <linearGradient id="chrome" x1="20" y1="20" x2="100" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset=".45" stop-color="#D8DEE8"/>
+      <stop offset="1" stop-color="#9AA3B2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- speed swooshes -->
+  <path d="M18 28c18-16 42-22 68-16" stroke="url(#chrome)" stroke-width="3.2" stroke-linecap="round" opacity=".95"/>
+  <path d="M22 34c20-14 46-18 70-12" stroke="url(#gold)" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M88 18c10 2 18 8 22 16" stroke="url(#chrome)" stroke-width="2" stroke-linecap="round" opacity=".75"/>
+
+  <!-- car body -->
+  <path fill="url(#gold)" d="M20 48.5c1.5-5 5.5-9.5 11.5-12l8.5-3.5c3-6.5 9-11 17.5-11.5 7-.4 13.5 2.5 17.8 7.8l9.5 2.8c6 1.8 10 6 11 11.5l.5 2.9H19.5l.5-2Z"/>
+  <!-- cabin glass -->
+  <path fill="url(#chrome)" opacity=".55" d="M46 26.5c4.5-1.5 10-1.2 14.2 1.5l-2 5.2c-3.8-1.4-8.2-1.6-12.5-1l.3-5.7Z"/>
+  <path fill="#0B0B0B" opacity=".28" d="M62 29c3.5 2 6 4.8 7.2 7.8h9.5c-1.2-3.5-4-6.2-7.8-7.5L62 29Z"/>
+  <!-- wheels -->
+  <circle cx="34" cy="52.5" r="6.2" fill="#111" stroke="url(#gold)" stroke-width="1.8"/>
+  <circle cx="34" cy="52.5" r="2.4" fill="url(#chrome)"/>
+  <circle cx="86" cy="52.5" r="6.2" fill="#111" stroke="url(#gold)" stroke-width="1.8"/>
+  <circle cx="86" cy="52.5" r="2.4" fill="url(#chrome)"/>
+</svg>
