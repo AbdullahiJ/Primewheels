@@ -2,9 +2,18 @@ const nav = document.getElementById("nav");
 const toggle = document.getElementById("navToggle");
 const links = document.getElementById("navLinks");
 
-window.addEventListener("scroll", () => {
-  nav.classList.toggle("scrolled", window.scrollY > 20);
-});
+const scrollCue = document.getElementById("scrollCue");
+
+window.addEventListener(
+  "scroll",
+  () => {
+    nav.classList.toggle("scrolled", window.scrollY > 20);
+    if (scrollCue) {
+      scrollCue.classList.toggle("is-hidden", window.scrollY > 90);
+    }
+  },
+  { passive: true }
+);
 
 toggle.addEventListener("click", () => {
   links.classList.toggle("open");

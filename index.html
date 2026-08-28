@@ -8,8 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="icon" href="images/logo-circle.jpg?v=2" type="image/jpeg" />
-  <link rel="stylesheet" href="styles.css?v=14" />
+  <link rel="icon" href="images/logo-circle-sm.jpg" type="image/jpeg" />
+  <link rel="preload" as="image" href="images/hero-nairobi-expressway.jpg" fetchpriority="high" />
+  <link rel="stylesheet" href="styles.css?v=15" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -18,7 +19,7 @@
   <header class="nav" id="nav">
     <a class="brand" href="#top">
       <span class="brand-mark">
-        <img src="images/logo-circle.jpg?v=2" alt="" width="72" height="72" />
+        <img src="images/logo-circle-sm.jpg" alt="" width="72" height="72" decoding="async" />
       </span>
       <span class="brand-text">
         <strong>PRIME WHEELS</strong>
@@ -42,18 +43,22 @@
     <section class="hero">
       <div class="hero-media">
         <img
-          src="images/hero-nairobi-expressway.png"
+          src="images/hero-nairobi-expressway.jpg"
           alt="White Toyota Prado, Land Cruiser 300 and Mercedes-Benz G-Wagon on the Nairobi Expressway at sunset"
+          width="1400"
+          height="933"
+          fetchpriority="high"
+          decoding="async"
         />
         <div class="hero-shade"></div>
+        <a class="hero-call" href="tel:+254759500289">
+          <span class="hero-call-ico" aria-hidden="true">☎</span>
+          <span class="hero-call-text">
+            <small>For any inquiry call</small>
+            <strong>+254 759 500 289</strong>
+          </span>
+        </a>
       </div>
-      <a class="hero-call" href="tel:+254759500289">
-        <span class="hero-call-ico" aria-hidden="true">☎</span>
-        <span class="hero-call-text">
-          <small>For any inquiry call</small>
-          <strong>+254 759 500 289</strong>
-        </span>
-      </a>
       <div class="hero-copy">
         <p class="eyebrow gold-rule">Drive luxury. Own excellence.</p>
         <h1>PRIME <em>WHEELS</em> AFRICA</h1>
@@ -72,6 +77,11 @@
           <div><dt>Nairobi</dt><dd>Pangani Agoi Road</dd></div>
         </dl>
       </div>
+      <a class="scroll-cue" href="#services" id="scrollCue">
+        <span class="scroll-cue-road" aria-hidden="true"></span>
+        <span class="scroll-cue-text">The road continues</span>
+        <span class="scroll-cue-chevron" aria-hidden="true"></span>
+      </a>
     </section>
 
     <section class="strip" aria-label="Services we offer">
@@ -140,7 +150,7 @@
       <div class="fleet-grid" id="fleetGrid">
         <article class="car-card" data-type="rent">
           <div class="car-photo">
-            <img class="prado-shot" src="images/prado-nairobi.png" alt="Toyota Land Cruiser Prado with Nairobi city skyline" />
+            <img class="prado-shot" src="images/prado-nairobi.jpg" alt="Toyota Land Cruiser Prado with Nairobi city skyline" loading="lazy" decoding="async" width="1100" height="733" />
             <span class="tag">Hire</span>
           </div>
           <div class="car-body">
@@ -154,7 +164,7 @@
         </article>
         <article class="car-card" data-type="rent">
           <div class="car-photo">
-            <img src="images/harrier-limuru.png" alt="White Toyota Harrier at Limuru tea plantations" />
+            <img src="images/harrier-limuru.jpg" alt="White Toyota Harrier at Limuru tea plantations" loading="lazy" decoding="async" width="1100" height="733" />
             <span class="tag">Hire</span>
           </div>
           <div class="car-body">
@@ -168,7 +178,7 @@
         </article>
         <article class="car-card" data-type="rent">
           <div class="car-photo">
-            <img src="images/lc300-statehouse.png" alt="Toyota Land Cruiser 300 at Kenya State House" />
+            <img src="images/lc300-statehouse.jpg" alt="Toyota Land Cruiser 300 at Kenya State House" loading="lazy" decoding="async" width="1100" height="733" />
             <span class="tag">Hire</span>
           </div>
           <div class="car-body">
@@ -182,7 +192,7 @@
         </article>
         <article class="car-card" data-type="rent">
           <div class="car-photo">
-            <img src="images/cx5-wildlife.png" alt="Red Mazda CX-5 with Kenyan wildlife safari background" />
+            <img src="images/cx5-wildlife.jpg" alt="Red Mazda CX-5 with Kenyan wildlife safari background" loading="lazy" decoding="async" width="1100" height="733" />
             <span class="tag">Hire</span>
           </div>
           <div class="car-body">
@@ -196,7 +206,7 @@
         </article>
         <article class="car-card" data-type="rent">
           <div class="car-photo">
-            <img src="images/markx-expressway.png" alt="Toyota Mark X on the Nairobi Expressway" />
+            <img src="images/markx-expressway.jpg" alt="Toyota Mark X on the Nairobi Expressway" loading="lazy" decoding="async" width="1100" height="733" />
             <span class="tag">Hire</span>
           </div>
           <div class="car-body">
@@ -210,7 +220,7 @@
         </article>
         <article class="car-card" data-type="rent">
           <div class="car-photo">
-            <img src="images/axio-naivasha.png" alt="Toyota Axio at Lake Naivasha" />
+            <img src="images/axio-naivasha.jpg" alt="Toyota Axio at Lake Naivasha" loading="lazy" decoding="async" width="1100" height="733" />
             <span class="tag">Hire</span>
           </div>
           <div class="car-body">
@@ -224,7 +234,7 @@
         </article>
         <article class="car-card" data-type="rent">
           <div class="car-photo">
-            <img src="images/rangerover-amboseli.png" alt="Range Rover at Amboseli with Mount Kilimanjaro" />
+            <img src="images/rangerover-amboseli.jpg" alt="Range Rover at Amboseli with Mount Kilimanjaro" loading="lazy" decoding="async" width="1100" height="733" />
             <span class="tag">Hire</span>
           </div>
           <div class="car-body">
@@ -238,7 +248,7 @@
         </article>
         <article class="car-card" data-type="rent">
           <div class="car-photo">
-            <img src="images/v8-mara.png" alt="Land Cruiser V8 in the Maasai Mara" />
+            <img src="images/v8-mara.jpg" alt="Land Cruiser V8 in the Maasai Mara" loading="lazy" decoding="async" width="1100" height="733" />
             <span class="tag">Hire</span>
           </div>
           <div class="car-body">
@@ -252,7 +262,7 @@
         </article>
         <article class="car-card" data-type="rent">
           <div class="car-photo">
-            <img src="images/lx570-diani.png" alt="Lexus LX 570 on the Kenyan coast" />
+            <img src="images/lx570-diani.jpg" alt="Lexus LX 570 on the Kenyan coast" loading="lazy" decoding="async" width="1100" height="733" />
             <span class="tag">Hire</span>
           </div>
           <div class="car-body">
@@ -266,7 +276,7 @@
         </article>
         <article class="car-card" data-type="rent">
           <div class="car-photo">
-            <img src="images/rx-nairobi.png" alt="Lexus RX against Nairobi skyline" />
+            <img src="images/rx-nairobi.jpg" alt="Lexus RX against Nairobi skyline" loading="lazy" decoding="async" width="1100" height="733" />
             <span class="tag">Hire</span>
           </div>
           <div class="car-body">
@@ -326,7 +336,7 @@
 
     <section class="airport" id="airport">
       <div class="airport-visual">
-        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80" alt="Aircraft on the tarmac at dusk" />
+        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=70" alt="Aircraft on the tarmac at dusk" loading="lazy" decoding="async" width="900" height="600" />
       </div>
       <div class="airport-copy">
         <p class="eyebrow">Airport transfers</p>
@@ -352,7 +362,7 @@
       </div>
       <div class="why-grid">
         <figure class="why-photo">
-          <img src="images/why-office.png" alt="PRIME WHEELS AFRICA car hire office and showroom" />
+          <img src="images/why-office.jpg" alt="PRIME WHEELS AFRICA car hire office and showroom" loading="lazy" decoding="async" width="1100" height="733" />
         </figure>
         <div class="why-list">
           <article>
@@ -476,7 +486,7 @@
     <div class="footer-inner">
       <div class="brand footer-brand">
         <span class="brand-mark">
-          <img src="images/logo-circle.jpg?v=2" alt="PRIME WHEELS AFRICA" width="140" height="140" />
+          <img src="images/logo-mark.jpg" alt="PRIME WHEELS AFRICA" width="140" height="140" loading="lazy" decoding="async" />
         </span>
         <span class="brand-text">
           <strong>PRIME WHEELS</strong>
@@ -489,6 +499,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=7"></script>
+  <script src="app.js?v=8"></script>
 </body>
 </html>
